@@ -7,7 +7,7 @@ export default class Banner extends Component {
     return (
       <div className="containerBanner">
         <Row>
-          <Col  md={6} className="serviceContent">
+          <Col md={6} className="serviceContent">
             <h2 className="serviceHead">
               <strong>Sewa & Rental Mobil Terbaik di Kawasan (Lokasimu)</strong>
             </h2>
@@ -18,7 +18,7 @@ export default class Banner extends Component {
             </p>
             <div className="btn-sewa">Mulai Sewa Mobil</div>
           </Col>
-          <Col  md={6}>
+          <Col md={6}>
             <img
               className="carBanner"
               src="assets/images/BannerCar.png"

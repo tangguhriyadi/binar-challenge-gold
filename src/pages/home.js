@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
-import { Banner } from "../components"
+import { Banner, OurService } from "../components"
 
 
 export default class Home extends Component {
   render() {
     return (
-        
-      <Banner />
+      <div>
+       <Banner />
+       <OurService />
+      </div>
+      
     )
   }
 }

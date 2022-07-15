@@ -2,6 +2,9 @@
   text-align: center;
   font-family: Arial;
 }
+*, body, main {
+  font-family: Arial;
+}
 
 /* Navbar */
 .navi {
@@ -73,6 +76,37 @@
   background-position: bottom;
 }
 
+.serv {
+  margin-top: 104px;
+}
+
+.serviceHead2 {
+  padding:0;
+  width: 468px;
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  
+}
+
+.serviceText2 {
+  margin-top:16px;
+  font-size:14px;
+  font-weight: 700;
+  line-height: 20px;
+  font-style: normal;
+  height: 80px;
+  width: 468px;
+}
+
+.serviceItem {
+  margin-right: 16px;
+}
+.serviceli {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+}
 
 
 

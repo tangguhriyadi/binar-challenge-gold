@@ -8,6 +8,7 @@ export default class App extends Component {
     return (
       <BrowserRouter>
        <NavbarComp />
+       
         <main>
           <Routes>
             <Route path="/" element={<Home />} exact/>

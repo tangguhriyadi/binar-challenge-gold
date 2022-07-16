@@ -12,8 +12,8 @@ export default class WhyUs extends Component {
         <p className="whyKet">Mengapa Harus Memilih Binar Car</p>
         <Container fluid style={{ padding:"0", marginTop:"40px" }}>
         <Row className="whyItem" >
-          <Col md={3} className="whyCol" >
-            <Card style={{ width: "16rem", padding:"0", minWidth:"268px" }}>
+          <Col xl={3} className="whyCol" >
+            <Card className="responsiveCard" style={{ width: "16rem", padding:"0" }}>
               <Card.Body>
                 <Card.Title className="mb-0"><img src={complete} alt="complete"></img></Card.Title>
                 <Card.Subtitle className="mb-2" style={{ marginTop:"16px" }}>
@@ -25,8 +25,8 @@ export default class WhyUs extends Component {
               </Card.Body>
             </Card>
           </Col>
-          <Col md={3} className="whyCol" >
-            <Card style={{ width: "16rem", padding:"0" }}>
+          <Col xl={3} className="whyCol" >
+            <Card className="responsiveCard" style={{ width: "16rem", padding:"0" }}>
               <Card.Body>
                 <Card.Title className="mb-0"><img src={icon_price} alt="price"></img></Card.Title>
                 <Card.Subtitle className="mb-2" style={{ marginTop:"16px" }}>
@@ -38,8 +38,8 @@ export default class WhyUs extends Component {
               </Card.Body>
             </Card>
           </Col>
-          <Col md={3} className="whyCol">
-            <Card style={{ width: "16rem", padding:"0" }}>
+          <Col xl={3} className="whyCol">
+            <Card className="responsiveCard" style={{ width: "16rem", padding:"0" }}>
               <Card.Body>
                 <Card.Title className="mb-0"><img src={icon_24hrs} alt="icon_24hrs"></img></Card.Title>
                 <Card.Subtitle className="mb-2" style={{ marginTop:"16px" }}>
@@ -51,8 +51,8 @@ export default class WhyUs extends Component {
               </Card.Body>
             </Card>
           </Col>
-          <Col md={3} className="whyCol" >
-            <Card style={{ width: "16rem", padding:"0" }}>
+          <Col xl={3} className="whyCol" >
+            <Card className="responsiveCard" style={{ width: "16rem", padding:"0" }}>
               <Card.Body>
                 <Card.Title className="mb-0"><img src={icon_professional} alt="icon_professional"></img></Card.Title>
                 <Card.Subtitle className="mb-2" style={{ marginTop:"16px" }}>

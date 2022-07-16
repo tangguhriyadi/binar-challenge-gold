@@ -9,7 +9,7 @@ export default class OurService extends Component {
       <div id="ourService">
         <Row className="d-flex justify-content-center serv">
             <Col md={6} className="text-center">
-                <img src="assets/images/img_service.png" alt="girl"></img>
+                <img className="girl" src="assets/images/img_service.png" alt="girl"></img>
             </Col>
             <Col md={5} style ={{ padding:0 }}>
                 <h2 className="serviceHead2">Best Car Rental for any kind of trip in (Lokasimu)!</h2>

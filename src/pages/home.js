@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Banner, OurService } from "../components"
+import { Banner, OurService, WhyUs } from "../components"
 
 
 export default class Home extends Component {
@@ -8,6 +8,7 @@ export default class Home extends Component {
       <div>
        <Banner />
        <OurService />
+       <WhyUs />
       </div>
       
     )

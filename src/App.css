@@ -108,7 +108,46 @@
   font-size: 14px;
 }
 
+.whyContainer {
+  margin-left: 136px;
+  margin-top: 200px;
+  margin-right: 136px;
+}
 
+.whyHead {
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 0;
+  
+}
+
+.whyKet {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.whyItem {
+  margin-top:16px;
+
+
+}
+.whyText {
+  font-weight: 700;
+font-size: 14px;
+line-height: 20px;
+margin-top: 16px;
+font-style: none;
+padding:0;
+}
+
+.whyCol {
+  padding:0;
+}
 
 @media screen and (max-width: 768px){
   .logo {

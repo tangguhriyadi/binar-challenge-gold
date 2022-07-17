@@ -6,7 +6,7 @@ import ficheck from '../icon/ficheck.svg'
 export default class OurService extends Component {
   render() {
     return (
-      <div id="ourService">
+      <div id="ourServices">
         <Row className="d-flex justify-content-center serv">
             <Col md={6} className="text-center">
                 <img className="girl" src="assets/images/img_service.png" alt="girl"></img>

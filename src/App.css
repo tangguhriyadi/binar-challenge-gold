@@ -110,7 +110,7 @@
 
 .whyContainer {
   margin-left: 136px;
-  margin-top: 200px;
+  margin-top: 100px;
   margin-right: 136px;
 }
 
@@ -147,6 +147,17 @@ padding:0;
 
 .whyCol {
   padding:0;
+}
+
+.textcard {
+  background-color: #F1F3FF;
+}
+
+.slick-slide > div {
+  margin: 0 20px;
+}
+.slick-list {
+  margin: 0 -20px;
 }
 
 @media screen and (max-width: 768px){
@@ -196,21 +207,44 @@ padding:0;
   }
 
   .whyContainer {
-    margin:16px;
+    margin:0;
     padding:0;
     width: 100%;
+
+  }
+  .whyHead {
+    text-align: center;
     
+  }
+  .whyKet{
+    text-align: center;
+  }
+  .whyItem {
+    /* margin-left: 60px !important; */
+    display: grid !important;
+    justify-content: center !important;
+  }
+  .whyCol {
+    margin-top: 16px;
   }
   .responsiveCard {
     width: 100%;
   }
-  .whyItem {
-    margin-left: 24px;
-  }
   .col-md-5 {
     margin-left :32px;
   }
+  .slick-slide > div {
+    margin: 0 ;
+  }
+  .slick-list {
+    height:392px;
+    
+  }
 
+  .stars {
+    margin: auto;
+  }
+ 
 }
 
 

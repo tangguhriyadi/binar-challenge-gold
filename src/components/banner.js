@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "../App.css";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Button } from "react-bootstrap";
+import {Link} from 'react-router-dom'
+
 
 export default class Banner extends Component {
   render() {
@@ -16,7 +18,11 @@ export default class Banner extends Component {
               kualitas terbaik dengan harga terjangkau. Selalu siap melayani
               kebutuhanmu untuk sewa mobil selama 24 jam.
             </p>
-            <div className="btn-sewa">Mulai Sewa Mobil</div>
+            <Button
+            className="btn-sewa"
+            as={Link}
+            to='/search'
+            >Mulai Sewa Mobil</Button>
           </Col>
           <Col md={6}>
             <img

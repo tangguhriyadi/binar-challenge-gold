@@ -1,288 +1,248 @@
 .App {
-  text-align: center;
-  font-family: Arial;
-}
-*, body, main {
-  font-family: Arial;
-}
-
-/* Navbar */
-.navi {
-  background-color: #F1F3FF;
-  padding:0;
-  padding-top: 25px;
-
-}
-
-.logo {
-  width: 100px;
-  height:34px;
-  background-color: #0D28A6;
-  margin-left: 124px;
-}
-
-.navli {
-  margin-right: 237px;
-  display: flex;
-  grid-gap:32px;
-  font-size:14px;
-  font-weight: 700;
-}
-
-/* Banner */
-
-.containerBanner {
-  height: 448px;
-  background-color:#F1F3FF ;
-}
-.serviceContent {
-    padding-left:136px;
-    padding-top:115px;
-}
-.serviceHead {
-  font-size: 36px;
-  font-weight: 700;
-  line-height: 54px;
-}
-.serviceText {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
-  max-width: 468px;
-  margin-top:8px;
-}
-
-.btn-sewa {
-  display: flex;
-  align-items: center;
-  font-weight: 600;
-  font-size: 14px;
-  color:white;
-  background-color:#5CB85F;
-  width: 140px;
-  height: 36px;
-  line-height: 12px;
-  padding: 8px 12px;
-  gap: 10px;
-  border-radius: 2px;
+    text-align: center;
+    font-family: Arial;
+  }
+  *, body, main {
+    font-family: Arial;
+  }
   
-}
-.carBanner {
-  width:704px;
-  height: 407px;
-  margin-top: 35px;
-  background-image: url('../public/assets/images/bg-blue.png');
-  background-repeat: no-repeat;
-  background-position: bottom;
-}
-
-.serv {
-  margin-top: 104px;
-}
-
-.serviceHead2 {
-  padding:0;
-  width: 468px;
-  font-size: 24px;
-  line-height: 36px;
-  font-weight: 700;
+  /* Navbar */
+  .navi {
+    background-color: #F1F3FF;
+    padding:0;
+    padding-top: 25px;
   
-}
-
-.serviceText2 {
-  margin-top:16px;
-  font-size:14px;
-  font-weight: 700;
-  line-height: 20px;
-  font-style: normal;
-  height: 80px;
-  width: 468px;
-}
-
-.serviceItem {
-  margin-right: 16px;
-}
-.serviceli {
-  margin-bottom: 20px;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.whyContainer {
-  margin-left: 136px;
-  margin-top: 100px;
-  margin-right: 136px;
-}
-
-.whyHead {
-
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 36px;
-  margin-bottom: 0;
+  }
   
-}
-
-.whyKet {
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 20px;
-  margin-top: 16px;
-  margin-bottom: 0;
-}
-
-.whyItem {
-  margin-top:16px;
-
-
-}
-.whyText {
-  font-weight: 700;
-font-size: 14px;
-line-height: 20px;
-margin-top: 16px;
-font-style: none;
-padding:0;
-}
-
-.whyCol {
-  padding:0;
-}
-
-.textcard {
-  background-color: #F1F3FF;
-}
-
-.slick-slide > div {
-  margin: 0 20px;
-}
-.slick-list {
-  margin: 0 -20px;
-}
-
-@media screen and (max-width: 768px){
   .logo {
-    margin-left:4px;
-
+    width: 100px;
+    height:34px;
+    background-color: #0D28A6;
+    margin-left: 124px;
   }
-  .containerBanner {
-    width: 100%;
-    height:592px;
-  }
-  .serviceContent {
-    margin:16px;
-    padding:8px;
-  }
-  .serviceHead {
-    width: 328px;
-    height: 216px;
-    
-  }
-  .serviceText {
-    width: 328px;
-    height: 60px;
+  
+  .navli {
+    margin-right: 237px;
+    display: flex;
+    grid-gap:32px;
+    font-size:14px;
     font-weight: 700;
   }
-  .btn-sewa{
-    margin-top: 24px;
+  
+  /* Banner */
+  
+  .containerBanner {
+    height: 448px;
+    background-color:#F1F3FF ;
+  }
+  .serviceContent {
+      padding-left:136px;
+      padding-top:115px;
+  }
+  .serviceHead {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 54px;
+  }
+  .serviceText {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 468px;
+    margin-top:8px;
+  }
+  
+  .btn-sewa {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    color:white;
+    background-color:#5CB85F;
+    width: 140px;
+    height: 36px;
+    line-height: 12px;
+    padding: 8px 12px;
+    gap: 10px;
+    border-radius: 2px;
+    cursor:pointer;
   }
   .carBanner {
-    width: 100%;
-    height: 199px;
+    width:704px;
+    height: 407px;
+    margin-top: 35px;
     background-image: url('../public/assets/images/bg-blue.png');
     background-repeat: no-repeat;
-    background-size:  370px 118px;
-    margin:0;
-    padding: 0;
-    float:right
-    
+    background-position: bottom;
   }
-  .navli {
-    
-    margin-right: 0;
+  
+  .serv {
+    margin-top: 104px;
   }
-
-  .girl {
-    width: 100%;
-  }
-
-  .whyContainer {
-    margin:0;
+  
+  .serviceHead2 {
     padding:0;
-    width: 100%;
-
-  }
-  .whyHead {
-    text-align: center;
+    width: 468px;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 700;
     
   }
-  .whyKet{
-    text-align: center;
+  
+  .serviceText2 {
+    margin-top:16px;
+    font-size:14px;
+    font-weight: 700;
+    line-height: 20px;
+    font-style: normal;
+    height: 80px;
+    width: 468px;
   }
-  .whyItem {
-    /* margin-left: 60px !important; */
-    display: grid !important;
-    justify-content: center !important;
+  
+  .serviceItem {
+    margin-right: 16px;
   }
-  .whyCol {
+  .serviceli {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+  }
+  
+  .whyContainer {
+    margin-left: 136px;
+    margin-top: 100px;
+    margin-right: 136px;
+  }
+  
+  .whyHead {
+  
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 0;
+    
+  }
+  
+  .whyKet {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
     margin-top: 16px;
+    margin-bottom: 0;
   }
-  .responsiveCard {
-    width: 100%;
+  
+  .whyItem {
+    margin-top:16px;
+  
+  
   }
-  .col-md-5 {
-    margin-left :32px;
+  .whyText {
+    font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 16px;
+  font-style: none;
+  padding:0;
   }
+  
+  .whyCol {
+    padding:0;
+  }
+  
+  .textcard {
+    background-color: #F1F3FF;
+  }
+  
   .slick-slide > div {
-    margin: 0 ;
+    margin: 0 20px;
   }
   .slick-list {
-    height:392px;
-    
+    margin: 0 -20px;
   }
-
-  .stars {
-    margin: auto;
+  
+  @media screen and (max-width: 768px){
+    .logo {
+      margin-left:4px;
+  
+    }
+    .containerBanner {
+      width: 100%;
+      height:592px;
+    }
+    .serviceContent {
+      margin:16px;
+      padding:8px;
+    }
+    .serviceHead {
+      width: 328px;
+      height: 216px;
+      
+    }
+    .serviceText {
+      width: 328px;
+      height: 60px;
+      font-weight: 700;
+    }
+    .btn-sewa{
+      margin-top: 24px;
+    }
+    .carBanner {
+      width: 100%;
+      height: 199px;
+      background-image: url('../public/assets/images/bg-blue.png');
+      background-repeat: no-repeat;
+      background-size:  370px 118px;
+      margin:0;
+      padding: 0;
+      float:right
+      
+    }
+    .navli {
+      
+      margin-right: 0;
+    }
+  
+    .girl {
+      width: 100%;
+    }
+  
+    .whyContainer {
+      margin:0;
+      padding:0;
+      width: 100%;
+  
+    }
+    .whyHead {
+      text-align: center;
+      
+    }
+    .whyKet{
+      text-align: center;
+    }
+    .whyItem {
+      /* margin-left: 60px !important; */
+      display: grid !important;
+      justify-content: center !important;
+    }
+    .whyCol {
+      margin-top: 16px;
+    }
+    .responsiveCard {
+      width: 100%;
+    }
+    .col-md-5 {
+      margin-left :32px;
+    }
+    .slick-slide > div {
+      margin: 0 ;
+    }
+    .slick-list {
+      height:392px;
+      
+    }
+  
+    .stars {
+      margin: auto;
+    }
+   
   }
- 
-}
-
-
-
-
-
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
- */

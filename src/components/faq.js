@@ -14,7 +14,7 @@ export default class Faq extends Component {
       lineHeight: "20px",
     };
     return (
-      <Container className="mt-5">
+      <Container className="mt-5 mb-5" id="faq">
         <Row>
           <Col md={5}>
             <h2 style={styleH}>Frequently Asked Question</h2>

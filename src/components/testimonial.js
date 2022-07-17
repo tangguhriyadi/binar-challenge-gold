@@ -60,7 +60,7 @@ const Testimonial = () => {
     marginBottom:"20px"
   };
   return (
-    <Container className="mt-5" fluid>
+    <Container id="testimonial" className="mt-5" fluid>
         <h2 className="text-center" style={strongH}>Testimonial</h2>
         <p className="text-center" style={strongP} > Berbagai review positif dari para pelanggan kami</p>
       <Slider ref={sliderRef} {...settings} className="mt-5">
@@ -139,7 +139,7 @@ const Testimonial = () => {
               <Col className="d-grid justify-content-center text-center mt-5" md={4}>
                 <img
                   
-                  src="assets/images/john.png"
+                  src="assets/images/dee.png"
                   alt="rate"
                 ></img>
               </Col>

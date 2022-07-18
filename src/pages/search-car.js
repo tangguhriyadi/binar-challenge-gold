@@ -3,7 +3,9 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom"; */
 import { Footer, SearchContent } from "../components";
 import {Col, Row} from 'react-bootstrap'
+
 export default class Search extends Component {
+ 
   render() {
     return (
       <div>
@@ -29,7 +31,7 @@ export default class Search extends Component {
           </Col>
         </Row>
       </div>
-        <SearchContent />
+        <SearchContent  />
         <Footer />
       </div>
     );

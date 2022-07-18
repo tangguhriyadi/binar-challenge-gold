@@ -32,7 +32,7 @@
   /* Banner */
   
   .containerBanner {
-    height: 448px;
+    height: 500px;
     background-color:#F1F3FF ;
   }
   .serviceContent {
@@ -67,10 +67,26 @@
     border-radius: 2px;
     cursor:pointer;
   }
+  .btn-sewa1 {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    color:white;
+    background-color:#5CB85F;
+    width: 92px;
+    height: 36px;
+    line-height: 12px;
+    padding: 8px 12px;
+    border-radius: 2px;
+    cursor:pointer;
+    margin-top: 26px;
+    
+  }
   .carBanner {
     width:704px;
     height: 407px;
-    margin-top: 35px;
+    margin-top: 93px;
     background-image: url('../public/assets/images/bg-blue.png');
     background-repeat: no-repeat;
     background-position: bottom;

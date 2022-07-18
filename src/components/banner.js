@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 import "../App.css";
-import { Row, Col, Button } from "react-bootstrap";
+import { Row, Col, Button, Container } from "react-bootstrap";
 import {Link} from 'react-router-dom'
 
 
 export default class Banner extends Component {
   render() {
     return (
-      <div className="containerBanner">
+      <Container md={12} className="containerBanner" fluid>
         <Row>
           <Col md={6} className="serviceContent">
             <h2 className="serviceHead">
@@ -32,7 +32,7 @@ export default class Banner extends Component {
             ></img>
           </Col>
         </Row>
-      </div>
+      </Container>
     );
   }
 }

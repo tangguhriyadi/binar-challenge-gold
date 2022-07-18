@@ -1,11 +1,12 @@
 import {Container, Nav, Navbar, Offcanvas} from 'react-bootstrap';
 
+
 import "../App.css"
 
 function NavbarComp() {
   return (
-   
-        <Navbar key={'md'} expand={'md'} className="navi">
+       
+          <Navbar key={'md'} expand={'md'} className="navi sticky-md-top">
           <Container fluid>
             <Navbar.Brand href="#" className="logo"></Navbar.Brand>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-md`} />
@@ -32,6 +33,9 @@ function NavbarComp() {
             </Navbar.Offcanvas>
           </Container>
         </Navbar>
+        
+        
+        
       
 
   );

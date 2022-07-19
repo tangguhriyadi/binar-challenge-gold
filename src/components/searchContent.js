@@ -22,9 +22,9 @@ export default class SearchContent extends Component {
   };
   handleCategory = (e) => {
     if (e.target.value === "Masukan Nama Mobil") {
-        this.setState({
-            category: null,
-          });
+      this.setState({
+        category: null,
+      });
     } else {
       this.setState({
         category: e.target.value,
@@ -33,14 +33,19 @@ export default class SearchContent extends Component {
   };
   handlePrice = (e) => {
     if (e.target.value === "Masukan Harga Sewa Mobil per Hari") {
-        this.setState({
-            price: null,
-          });
+      this.setState({
+        price: null,
+      });
     } else {
       this.setState({
         price: e.target.value,
       });
     }
+  };
+  handlePrice1 = (e) => {
+    this.setState({
+      price: e.target.value,
+    });
   };
 
   onSubmit = (e) => {
@@ -56,23 +61,50 @@ export default class SearchContent extends Component {
       await axios
         .get(BASE_URL)
         .then((res) => {
-          const { name } = this.state;
+          const { name, category, price } = this.state;
           const result = res.data;
-          const newResultName = result.filter(function (e) {
-            return (e.name.toLowerCase() === name.toLowerCase()) 
-          });
-          return newResultName;
+
+          if (price === ">600000") {
+            const newResultName = result.filter(function (e) {
+              return (
+                e.name.toLowerCase().includes(name.toLowerCase()) &&
+                e.category.includes(category) &&
+                /* (e.price) >= (parseInt(price.slice(-6))) && */
+                e.price > 600000
+              );
+            });
+            return newResultName;
+          } else if (price === "<400000") {
+            const newResultName = result.filter(function (e) {
+              return (
+                e.name.toLowerCase().includes(name.toLowerCase()) &&
+                e.category.includes(category) &&
+                /* (e.price) >= (parseInt(price.slice(-6))) && */
+                e.price < 400000
+              );
+            });
+            return newResultName;
+          } else if (price === "400000-600000") {
+            const newResultName = result.filter(function (e) {
+              return (
+                e.name.toLowerCase().includes(name.toLowerCase()) &&
+                e.category.includes(category) &&
+                /* (e.price) >= (parseInt(price.slice(-6))) && */
+                e.price < 600000 &&
+                e.price >= 400000
+              );
+            });
+            return newResultName;
+          } else {
+            const newResultName = result.filter(function (e) {
+              return (
+                e.name.toLowerCase().includes(name.toLowerCase()) &&
+                e.category.includes(category)
+              );
+            });
+            return newResultName;
+          }
         })
-        /* .then((res) => {
-            const { category } = this.state;
-            const result = res
-            const newResultCategory = result.filter(function(e){
-                return Object.keys(e).some(i => {
-                    return e[i].toString().toLowerCase().includes(category)
-                })
-            })
-            return newResultCategory
-        }) */
         .then((res) => {
           const result = res;
           this.setState({
@@ -81,9 +113,9 @@ export default class SearchContent extends Component {
           console.log(res);
         });
     } else {
-      alert("please enter the empty field");
+      alert("Please fill at elast 1 field");
     }
-    /* console.log(this.state) */
+    // console.log(this.state)
   };
 
   render() {
@@ -93,11 +125,16 @@ export default class SearchContent extends Component {
       fontWeight: "300",
     };
     const { name, category, price } = this.state;
+    /* const num = new Intl.NumberFormat("en-US",{
+      style:"decimal",
+      currency:"IDR"
+    }) */
+
     return (
       <Container className="mb-4" style={{ marginTop: "-50px" }}>
         <Card className="ps-4 pe-0 pt-3 pb-4">
           <Form onSubmit={this.onSubmit}>
-            <Row /* className="d-flex justify-content-center" */>
+            <Row >
               <Col md>
                 <Form.Label style={styleP}>Nama Mobil</Form.Label>
                 <Form.Control
@@ -125,21 +162,19 @@ export default class SearchContent extends Component {
                 <Form.Label style={styleP}>Harga</Form.Label>
 
                 <Form.Select
-                  onChange={this.handlePrice}
+                  onChange={this.handlePrice1}
                   value={price}
                   style={styleP}
                 >
                   <option>Masukan Harga Sewa Mobil per Hari</option>
-                  <option className="placeH" >
-                   
-                    &lt; Rp.400.000
+                  <option value="<400000" className="placeH">
+                    &lt; Rp.400000
                   </option>
-                  <option className="placeH" >
-                    Rp.400.000 - Rp.600.000
+                  <option value="400000-600000" className="placeH">
+                    Rp.400.000 - Rp.6000000
                   </option>
-                  <option className="placeH" >
-                 
-                    &gt; Rp.400.000
+                  <option value=">600000" className="placeH">
+                    &gt; Rp.600.000
                   </option>
                 </Form.Select>
               </Col>

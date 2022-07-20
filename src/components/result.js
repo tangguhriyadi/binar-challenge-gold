@@ -5,7 +5,7 @@ export default class Result extends Component {
   render() {
     const { item } = this.props;
     const styleP1 = {
-      fontSize: "12px",
+      fontSize: "14px",
       fontWeight: "400",
     };
     const styleP2 = {
@@ -44,7 +44,7 @@ export default class Result extends Component {
               }
             />
             <Card.Body className="mt-5">
-              <Card.Title className="mb-3" style={styleP1}>{item.name}</Card.Title>
+              <Card.Title className="mb-3 mt-3" style={styleP1}>{item.name}</Card.Title>
               <Card.Subtitle style={styleH} className="mb-3">
                 Rp. {num.format(item.price)} / hari
               </Card.Subtitle>
@@ -52,8 +52,8 @@ export default class Result extends Component {
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua.
               </Card.Text>
-              <div className="d-grid gap-2">
-                <Button style={styleP3} variant="none" size="md">
+              <div className="d-grid">
+                <Button className="mt-2" style={styleP3} variant="none" size="md">
                   Pilih Mobil
                 </Button>
               </div>

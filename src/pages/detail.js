@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import "../App.css";
-import { Row, Col, Button, Container } from "react-bootstrap";
-import {Link} from 'react-router-dom'
+import { Footer, DetailContent } from "../components";
+import {Col, Row} from 'react-bootstrap'
 
-
-export default class Banner extends Component {
+export default class Detail extends Component {
+ 
   render() {
     return (
-      <Container md={12} className="containerBanner" fluid>
+      <div>
+        <div className="containerBanner">
         <Row>
           <Col md={6} className="serviceContent">
             <h2 className="serviceHead">
@@ -18,12 +18,7 @@ export default class Banner extends Component {
               kualitas terbaik dengan harga terjangkau. Selalu siap melayani
               kebutuhanmu untuk sewa mobil selama 24 jam.
             </p>
-            <Button
-            variant="none"
-            className="btn-sewa"
-            as={Link}
-            to='/search'
-            >Mulai Sewa Mobil</Button>
+    
           </Col>
           <Col md={6}>
             <img
@@ -33,7 +28,10 @@ export default class Banner extends Component {
             ></img>
           </Col>
         </Row>
-      </Container>
+      </div>
+        <DetailContent  />
+        <Footer />
+      </div>
     );
   }
 }

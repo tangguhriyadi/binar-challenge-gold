@@ -5,7 +5,7 @@ import { Footer, SearchContent } from "../components";
 import {Col, Row} from 'react-bootstrap'
 
 export default class Search extends Component {
- 
+
   render() {
     return (
       <div>

@@ -7,5 +7,6 @@ import JumboCard from './jumbocard'
 import Faq from './faq'
 import Footer from './footer'
 import SearchContent from './searchContent'
+import {DetailContent} from './detailContent'
 
-export { NavbarComp, Banner, OurService, WhyUs, Testimonial, JumboCard, Faq, Footer, SearchContent }
+export { NavbarComp, Banner, OurService, WhyUs, Testimonial, JumboCard, Faq, Footer, SearchContent, DetailContent }

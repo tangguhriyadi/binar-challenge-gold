@@ -1,8 +1,15 @@
 import axios from "axios";
 import React, { Component } from "react";
-import { Container, Form, Row, Col, Button, Card } from "react-bootstrap";
+import {
+  Container,
+  Form,
+  Row,
+  Col,
+  Button,
+  Card,
+} from "react-bootstrap";
 import { BASE_URL } from "../utils/constant";
-import Result from './result'
+import Result from "./result";
 
 export default class SearchContent extends Component {
   constructor(props) {
@@ -12,7 +19,7 @@ export default class SearchContent extends Component {
       name: "",
       category: "",
       price: "",
-      result: "",
+      result: null,
     };
   }
 
@@ -118,13 +125,11 @@ export default class SearchContent extends Component {
             result,
           });
           console.log(res);
-          
         })
         .catch((err) => console.log(err));
     } else {
       alert("Please fill at elast 1 field");
     }
-    
   };
 
   render() {
@@ -133,11 +138,20 @@ export default class SearchContent extends Component {
       width: "220px",
       fontWeight: "300",
     };
+    const styleH = {
+      fontSize: "14px",
+      fontWeight: "700",
+    };
     const { name, category, price, result } = this.state;
-    
+
     return (
       <Container className="mb-4" style={{ marginTop: "-50px" }}>
         <Card className="ps-4 pe-0 pt-3 pb-4">
+          {result && (
+            <h5 className="mb-3 mt-2" style={styleH}>
+              Pencarianmu
+            </h5>
+          )}
           <Form onSubmit={this.onSubmit}>
             <Row>
               <Col md>
@@ -189,26 +203,38 @@ export default class SearchContent extends Component {
                   <option>Disewa</option>
                 </Form.Select>
               </Col>
+              {result ? (
+                <Col md>
+                  <button
+                  variant="outline-primary"
+                  className="btn-sewa2 outline-primary"
+                  onClick={this.handleSubmit}
+                >
+                  Edit
+                </button>
+                </Col>
+                
+              ) : 
               <Col md>
-                <Button className="btn-sewa1" onClick={this.handleSubmit}>
+                <Button
+                  variant="none"
+                  className="btn-sewa1"
+                  onClick={this.handleSubmit}
+                >
                   Cari Mobil
                 </Button>
               </Col>
+              }
+              
             </Row>
           </Form>
         </Card>
-        <Row >
-        {result && 
-        result.map((item) => (
-          <Result 
-          key={item.id}
-          item={item} 
-          items={result}
-          />
-        ))}
+        <Row>
+          {result &&
+            result.map((item) => (
+              <Result key={item.id} item={item} />
+            ))}
         </Row>
-        
-        
       </Container>
     );
   }

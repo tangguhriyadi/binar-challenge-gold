@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { Component } from "react";
 import { Container, Form, Row, Col, Button, Card } from "react-bootstrap";
 import { BASE_URL } from "../utils/constant";
+import Result from './result'
 
 export default class SearchContent extends Component {
   constructor(props) {
@@ -51,6 +52,12 @@ export default class SearchContent extends Component {
   onSubmit = (e) => {
     e.preventDefault();
   };
+
+  /* changeImage = (val) => {
+    if(val.image === null){
+      val.image = 'https://firebasestorage.googleapis.com/v0/b/rent-car-507f6.appspot.com/o/1655268790869-Innova.png?alt=media'
+    }
+  } */
 
   handleSubmit = async () => {
     if (
@@ -111,11 +118,13 @@ export default class SearchContent extends Component {
             result,
           });
           console.log(res);
-        });
+          
+        })
+        .catch((err) => console.log(err));
     } else {
       alert("Please fill at elast 1 field");
     }
-    // console.log(this.state)
+    
   };
 
   render() {
@@ -124,17 +133,13 @@ export default class SearchContent extends Component {
       width: "220px",
       fontWeight: "300",
     };
-    const { name, category, price } = this.state;
-    /* const num = new Intl.NumberFormat("en-US",{
-      style:"decimal",
-      currency:"IDR"
-    }) */
-
+    const { name, category, price, result } = this.state;
+    
     return (
       <Container className="mb-4" style={{ marginTop: "-50px" }}>
         <Card className="ps-4 pe-0 pt-3 pb-4">
           <Form onSubmit={this.onSubmit}>
-            <Row >
+            <Row>
               <Col md>
                 <Form.Label style={styleP}>Nama Mobil</Form.Label>
                 <Form.Control
@@ -152,7 +157,7 @@ export default class SearchContent extends Component {
                   value={category}
                   style={styleP}
                 >
-                  <option className="placeH">Masukan Nama Mobil</option>
+                  <option className="placeH">Masukan Kapasitas Mobil</option>
                   <option className="placeH">2 - 4 orang</option>
                   <option className="placeH">4 - 6 orang</option>
                   <option className="placeH">6 - 8 orang</option>
@@ -171,7 +176,7 @@ export default class SearchContent extends Component {
                     &lt; Rp.400000
                   </option>
                   <option value="400000-600000" className="placeH">
-                    Rp.400.000 - Rp.6000000
+                    Rp.400.000 - Rp.600.000
                   </option>
                   <option value=">600000" className="placeH">
                     &gt; Rp.600.000
@@ -192,6 +197,18 @@ export default class SearchContent extends Component {
             </Row>
           </Form>
         </Card>
+        <Row >
+        {result && 
+        result.map((item) => (
+          <Result 
+          key={item.id}
+          item={item} 
+          items={result}
+          />
+        ))}
+        </Row>
+        
+        
       </Container>
     );
   }

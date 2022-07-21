@@ -195,9 +195,7 @@
   .slick-list {
     margin: 0 -20px;
   }
-  .placeH:hover {
-    background-color: #5CB85F;
-  }
+ 
   #accor .accordion-button.collapsed {
     padding:0;
     background-color: white;
@@ -218,8 +216,15 @@
   #accor .accordion-button:focus {
     box-shadow:none;
   }
+  .selectDrop {
+    border-radius: 2px;
+    
+  }
+  .selectDrop:focus {
+    box-shadow:none;
+    border-color: #35B0A7;
+  }
 
- 
   .select1 {
     background-image: url('./icon/fi_calendar.svg');
   }
@@ -230,6 +235,11 @@
     background-image: url('./icon/fi_users.svg');
   }
  
+
+  
+  
+ 
+
   @media screen and (max-width: 768px){
     .logo {
       margin-left:4px;
@@ -246,12 +256,30 @@
     .serviceHead {
       width: 328px;
       height: 216px;
-      
+    }
+    .serviceHead2 {
+      margin:16px;
+      width: 328px;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 36px;
     }
     .serviceText {
       width: 328px;
       height: 60px;
       font-weight: 700;
+    }
+    .serviceText2 {
+      width: 328px;
+      height: 100px;
+      font-weight: 700;
+      margin-left: 16px;
+    }
+    .serviceli {
+      margin-left: 16px;
+    }
+    .serviceContainer {
+      margin-left: 24px;
     }
     .btn-sewa{
       margin-top: 24px;
@@ -273,7 +301,12 @@
     }
   
     .girl {
-      width: 100%;
+      width: 252px;
+      height:228px;
+      margin-bottom: 20px;
+    }
+    .serv {
+      margin-top: 54px;
     }
   
     .whyContainer {
@@ -300,9 +333,7 @@
     .responsiveCard {
       width: 100%;
     }
-    .col-md-5 {
-      margin-left :32px;
-    }
+    
     .slick-slide > div {
       margin: 0 ;
     }
@@ -310,7 +341,38 @@
       height:392px;
       
     }
-  
+    .testimonials {
+      position: absolute;
+    }
+    .testimonialArrow1 {
+      margin-top: -110px;
+      margin-left: 140px;
+      margin-right: 24px;
+    }
+    .testimonialArrow2 {
+      margin-top: -110px;
+    
+    }
+    .faqContainer {
+      margin: 0;
+    }
+    .faqHead {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 36px;
+      text-align: center;
+    }
+    .faqContent {
+      font-style: normal;
+      font-weight: 700;
+      font-size:16px !important;
+      line-height: 20px;
+      text-align: center;
+      width: 369px;
+      height: 40px;
+      margin-bottom: 4px !important;
+    }
+    
     .stars {
       margin: auto;
     }

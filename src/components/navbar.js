@@ -1,4 +1,5 @@
 import {Container, Nav, Navbar, Offcanvas} from 'react-bootstrap';
+/* import {Link} from 'react-router-dom' */
 
 
 import "../App.css"
@@ -23,10 +24,10 @@ function NavbarComp() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1  navli">
-                  <Nav.Link href="#ourServices">Our Services</Nav.Link>
-                  <Nav.Link href="#whyUs">Why Us</Nav.Link>
-                  <Nav.Link href="#testimonial">Testimonial</Nav.Link>
-                  <Nav.Link href="#faq">FAQ</Nav.Link>
+                  <Nav.Link  href="#ourServices">Our Services</Nav.Link>
+                  <Nav.Link   href="#whyUs">Why Us</Nav.Link>
+                  <Nav.Link   href="#testimonial">Testimonial</Nav.Link>
+                  <Nav.Link   href="#faq">FAQ</Nav.Link>
                 </Nav>
                 
               </Offcanvas.Body>

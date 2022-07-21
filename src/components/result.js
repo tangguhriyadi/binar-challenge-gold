@@ -86,14 +86,3 @@ export default Result
 
 
 
-/* export default class Result extends Component {
-
-  render() {
-    
-    const { item } = this.props;
-    
-
-   
-  }
-}
- */

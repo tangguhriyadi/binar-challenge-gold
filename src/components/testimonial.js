@@ -157,9 +157,9 @@ const Testimonial = () => {
           </Card.Body>
         </Card>
       </Slider>
-      <div xs={4} className="text-center mt-4">
+      <div xs={4} className="text-center mt-4 testimonials">
         <img
-          className="me-4"
+          className="me-4 testimonialArrow1"
           src="assets/images/Leftbutton.png"
           alt="left"
           style={{ cursor: "pointer" }}
@@ -167,6 +167,7 @@ const Testimonial = () => {
         ></img>
 
         <img
+        className=" testimonialArrow2"
           src="assets/images/Rightbutton.png"
           alt="right"
           style={{ cursor: "pointer" }}

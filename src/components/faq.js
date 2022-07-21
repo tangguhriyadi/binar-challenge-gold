@@ -16,9 +16,9 @@ export default class Faq extends Component {
     return (
       <Container className="mt-5 mb-5" id="faq">
         <Row>
-          <Col md={5}>
-            <h2 style={styleH}>Frequently Asked Question</h2>
-            <p style={styleP}>
+          <Col md={5} className="faqContainer">
+            <h2 style={styleH} className="faqHead">Frequently Asked Question</h2>
+            <p style={styleP} className="faqContent">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </p>
           </Col>

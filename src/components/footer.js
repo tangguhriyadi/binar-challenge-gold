@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import list_item from '../icon/list_item.svg'
+import Rec74 from '../icon/Rec74.svg'
 
 export default class Footer extends Component {
   render() {
@@ -55,7 +57,7 @@ export default class Footer extends Component {
               <p style={styleP}>Connect with us</p>
               <img
                 style={{ marginBottom: "14px" }}
-                src="assets/images/listitem.png"
+                src={list_item}
                 alt="list"
               ></img>
             </Col>
@@ -63,7 +65,7 @@ export default class Footer extends Component {
               <p style={styleP}>Copyright Binar 2022</p>
               <img
                 style={{ marginBottom: "14px" }}
-                src="assets/images/74.png"
+                src={Rec74}
                 alt="list"
               ></img>
             </Col>

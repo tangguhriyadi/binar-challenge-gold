@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Footer, DetailContent } from "../components";
 import {Col, Row} from 'react-bootstrap'
+import merc from '../icon/merc.svg'
 
 export default class Detail extends Component {
  
@@ -23,7 +24,7 @@ export default class Detail extends Component {
           <Col md={6}>
             <img
               className="carBanner"
-              src="assets/images/BannerCar.png"
+              src={merc}
               alt="mobil"
             ></img>
           </Col>

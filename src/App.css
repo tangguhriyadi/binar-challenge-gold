@@ -237,7 +237,7 @@
     box-shadow: 0 0 0 99999px rgba(0, 0, 0, .8) !important;
     z-index: 1050;
   pointer-events:  auto;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease ;
   position: relative;
   
   }
@@ -247,7 +247,9 @@
 
   #highlight {
     border-radius:8px;
+    transition: all 0.3s ease ;
   }
+ 
   
  
 

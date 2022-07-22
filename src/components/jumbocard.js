@@ -30,7 +30,7 @@ export default class JumboCard extends Component {
           </Card.Text>
         </Card.Body>
         <Button
-            className="btn-sewa mt-5"
+            className="btn-sewa mt-5 jumbo"
             as={Link}
             to='/search'
             style={{margin:"auto"}}

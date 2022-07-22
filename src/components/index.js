@@ -8,5 +8,6 @@ import Faq from './faq'
 import Footer from './footer'
 import SearchContent from './searchContent'
 import {DetailContent} from './detailContent'
+import Searchtest from './searchtest'
 
-export { NavbarComp, Banner, OurService, WhyUs, Testimonial, JumboCard, Faq, Footer, SearchContent, DetailContent }
+export { NavbarComp, Banner, OurService, WhyUs, Testimonial, JumboCard, Faq, Footer, SearchContent, DetailContent, Searchtest }

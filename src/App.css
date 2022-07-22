@@ -216,10 +216,7 @@
   #accor .accordion-button:focus {
     box-shadow:none;
   }
-  .selectDrop {
-    border-radius: 2px;
-    
-  }
+  
   .selectDrop:focus {
     box-shadow:none;
     border-color: #35B0A7;
@@ -236,7 +233,21 @@
   }
  
 
+  .highlight1 {
+    box-shadow: 0 0 0 99999px rgba(0, 0, 0, .8) !important;
+    z-index: 1050;
+  pointer-events:  auto;
+  transition: all 0.5s ease;
+  position: relative;
   
+  }
+  .selectDrop:focus {
+    border-color: #35B0A7;
+  }
+
+  #highlight {
+    border-radius:8px;
+  }
   
  
 

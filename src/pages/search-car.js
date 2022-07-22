@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 /* import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom"; */
-import { Footer, SearchContent } from "../components";
+import { Footer, /* SearchContent, */ Searchtest } from "../components";
 import {Col, Row} from 'react-bootstrap'
 
 export default class Search extends Component {
@@ -31,7 +31,7 @@ export default class Search extends Component {
           </Col>
         </Row>
       </div>
-        <SearchContent  />
+        <Searchtest  />
         <Footer />
       </div>
     );

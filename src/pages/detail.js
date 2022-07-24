@@ -26,6 +26,7 @@ export default class Detail extends Component {
               className="carBanner"
               src={merc}
               alt="mobil"
+              loading="lazy"
             ></img>
           </Col>
         </Row>

@@ -142,6 +142,7 @@ export const DetailContent = () => {
                     : "https://firebasestorage.googleapis.com/v0/b/rent-car-507f6.appspot.com/o/1655268790869-Innova.png?alt=media"
                 }
                 alt={state.name}
+                loading='lazy'
               />
               <Card.Body>
                 <Card.Title style={styleH}>{state.name}</Card.Title>
@@ -149,7 +150,7 @@ export const DetailContent = () => {
                   className="mb-2 text-muted"
                   style={{ fontSize: "10px", fontWeight: "700" }}
                 >
-                  <img src={fi_users} alt="users"></img>{" "}
+                  <img src={fi_users} alt="users" loading='lazy'></img>{" "}
                   {state.category === "small" ? "4 - 6 orang" : state.category}
                 </Card.Subtitle>
                 <div

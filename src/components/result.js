@@ -48,6 +48,7 @@ const Result = ({item}) => {
                 ? item.image
                 : "https://firebasestorage.googleapis.com/v0/b/rent-car-507f6.appspot.com/o/1655268790869-Innova.png?alt=media"
             }
+            loading='lazy'
           />
           <Card.Body className="mt-5">
             <Card.Title className="mb-3 mt-3" style={styleP1}>

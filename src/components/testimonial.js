@@ -32,7 +32,7 @@ const Testimonial = () => {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
-          centerMode:false
+          centerMode: false,
         },
       },
       {
@@ -40,7 +40,7 @@ const Testimonial = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          centerMode:false
+          centerMode: false,
         },
       },
     ],
@@ -57,25 +57,38 @@ const Testimonial = () => {
     fontWeight: "700",
     fontSize: "24px",
     lineHeight: "36px",
-    marginBottom:"20px"
+    marginBottom: "20px",
   };
   return (
     <Container id="testimonial" className="mt-5" fluid>
-        <h2 className="text-center" style={strongH}>Testimonial</h2>
-        <p className="text-center" style={strongP} > Berbagai review positif dari para pelanggan kami</p>
+      <h2 className="text-center" style={strongH}>
+        Testimonial
+      </h2>
+      <p className="text-center" style={strongP}>
+        {" "}
+        Berbagai review positif dari para pelanggan kami
+      </p>
       <Slider ref={sliderRef} {...settings} className="mt-5">
         <Card md={12} style={style} className="textcard">
           <Card.Body>
             <Row>
-              <Col className="d-grid justify-content-center text-center mt-5" md={4}>
+              <Col
+                className="d-grid justify-content-center text-center mt-5"
+                md={4}
+              >
                 <img
-                  
                   src="assets/images/john.png"
                   alt="rate"
+                  loading="lazy"
                 ></img>
               </Col>
               <Col className="mt-4" md={8}>
-                <img className="stars" src="assets/images/Rate.png" alt="rate"></img>
+                <img
+                  className="stars"
+                  src="assets/images/Rate.png"
+                  alt="rate"
+                  loading="lazy"
+                ></img>
                 <p className="mt-2" style={strongP}>
                   “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing
@@ -90,38 +103,22 @@ const Testimonial = () => {
         <Card md={12} style={style} className="textcard">
           <Card.Body>
             <Row>
-              <Col className="d-grid justify-content-center text-center mt-5" md={4}>
+              <Col
+                className="d-grid justify-content-center text-center mt-5"
+                md={4}
+              >
                 <img
-                 
                   src="assets/images/dee.png"
                   alt="rate"
+                  loading="lazy"
                 ></img>
               </Col>
               <Col className="mt-4" md={8}>
-                <img className="stars" src="assets/images/Rate.png" alt="rate"></img>
-                <p className="mt-2" style={strongP}>
-                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing
-                  elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit, sed do eiusmod”
-                </p>
-                <p>John Dee 32, Bromo</p>
-              </Col>
-            </Row>
-          </Card.Body>
-        </Card>
-        <Card md={12} style={style} className="textcard">
-          <Card.Body>
-            <Row>
-              <Col className="d-grid justify-content-center text-center mt-5" md={4}>
                 <img
-                  
-                  src="assets/images/john.png"
+                  className="stars"
+                  src="assets/images/Rate.png"
                   alt="rate"
                 ></img>
-              </Col>
-              <Col className="mt-4" md={8}>
-                <img className="stars" src="assets/images/Rate.png" alt="rate"></img>
                 <p className="mt-2" style={strongP}>
                   “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing
@@ -136,15 +133,50 @@ const Testimonial = () => {
         <Card md={12} style={style} className="textcard">
           <Card.Body>
             <Row>
-              <Col className="d-grid justify-content-center text-center mt-5" md={4}>
+              <Col
+                className="d-grid justify-content-center text-center mt-5"
+                md={4}
+              >
+                <img src="assets/images/john.png" alt="rate"></img>
+              </Col>
+              <Col className="mt-4" md={8}>
                 <img
-                  
+                  className="stars"
+                  src="assets/images/Rate.png"
+                  alt="rate"
+                  loading="lazy"
+                ></img>
+                <p className="mt-2" style={strongP}>
+                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit, sed do eiusmod lorem ipsum dolor sit amet, consectetur
+                  adipiscing elit, sed do eiusmod”
+                </p>
+                <p>John Dee 32, Bromo</p>
+              </Col>
+            </Row>
+          </Card.Body>
+        </Card>
+        <Card md={12} style={style} className="textcard">
+          <Card.Body>
+            <Row>
+              <Col
+                className="d-grid justify-content-center text-center mt-5"
+                md={4}
+              >
+                <img
                   src="assets/images/dee.png"
                   alt="rate"
+                  loading="lazy"
                 ></img>
               </Col>
               <Col className="mt-4" md={8}>
-                <img className="stars" src="assets/images/Rate.png" alt="rate"></img>
+                <img
+                  className="stars"
+                  src="assets/images/Rate.png"
+                  alt="rate"
+                  loading="lazy"
+                ></img>
                 <p className="mt-2" style={strongP}>
                   “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod lorem ipsum dolor sit amet, consectetur adipiscing
@@ -167,7 +199,7 @@ const Testimonial = () => {
         ></img>
 
         <img
-        className=" testimonialArrow2"
+          className=" testimonialArrow2"
           src="assets/images/Rightbutton.png"
           alt="right"
           style={{ cursor: "pointer" }}

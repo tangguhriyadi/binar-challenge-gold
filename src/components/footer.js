@@ -59,6 +59,7 @@ export default class Footer extends Component {
                 style={{ marginBottom: "14px" }}
                 src={list_item}
                 alt="list"
+                loading='lazy'
               ></img>
             </Col>
             <Col md={{ span: 3, offset: 1 }}>
@@ -66,7 +67,8 @@ export default class Footer extends Component {
               <img
                 style={{ marginBottom: "14px" }}
                 src={Rec74}
-                alt="list"
+                alt="logo"
+                loading='lazy'
               ></img>
             </Col>
           </Row>

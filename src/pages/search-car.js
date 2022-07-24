@@ -27,6 +27,7 @@ export default class Search extends Component {
               className="carBanner"
               src="assets/images/BannerCar.png"
               alt="mobil"
+              loading="lazy"
             ></img>
           </Col>
         </Row>

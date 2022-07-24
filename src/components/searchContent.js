@@ -4,11 +4,46 @@ import { Container, Form, Row, Col, Button, Card } from "react-bootstrap";
 import { BASE_URL } from "../utils/constant";
 import Result from "./result";
 import Swal from "sweetalert2";
+import Select from 'react-select'
 
 const SearchContent = () => {
   const [name, setName] = useState("");
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState('');
+  const categoryList = [
+    {
+      value:'2 - 4 orang',
+      label:'2 - 4 orang'
+    },
+    {
+      value:'4 - 6 orang',
+      label:'4 - 6 orang'
+    },
+    {
+      value:'6 - 8 orang',
+      label:'6 - 8 orang'
+    },
+  ]
   const [price, setPrice] = useState("");
+  const PriceList = [
+    {
+      value:'<400000',
+      label:'<Rp.400.000'
+    },
+    {
+      value:'400000-600000',
+      label:'Rp.400.000 - Rp.600.000'
+    },
+    {
+      value:'>600000',
+      label:'>Rp.600.000'
+    },
+  ]
+  const StatusList = [
+    {
+      value:null,
+      label:'Disewa'
+    },
+  ]
   const [result, setResult] = useState(null);
   const [show, setShow] = useState(false);
   
@@ -16,15 +51,11 @@ const SearchContent = () => {
     setName(e.target.value);
   };
   const handleCategory = (e) => {
-    if (e.target.value === "Masukan Nama Mobil") {
-      setCategory(null);
-    } else {
-      setCategory(e.target.value);
-    }
+    setCategory(e.value)
   };
  
-  const handlePrice1 = (e) => {
-    setPrice(e.target.value);
+  const handlePrice = (e) => {
+    setPrice(e.value);
   };
 
   const onSubmit = (e) => {
@@ -100,8 +131,8 @@ const SearchContent = () => {
     } else {
       Swal.fire({
         icon: "error",
-        title: "Oops...",
-        text: "Please enter at least 1 field",
+        title: "Maaf",
+        text: "Masukan minimal 1 kolom",
       });
     }
   };
@@ -110,11 +141,39 @@ const SearchContent = () => {
     width: "220px",
     fontWeight: "300",
     borderRadius: "2px",
+    paddingTop:'9px',
+    paddingBottom:'9px'
+  };
+  const styleP2 = {
+    fontSize: "12px",
+    width: "220px",
+    fontWeight: "300",
+    borderRadius: "2px",
+    
   };
   const styleH = {
     fontSize: "14px",
     fontWeight: "700",
   };
+ 
+  const customTheme = (theme) => {
+    return {
+      ...theme,
+      colors:  {
+        ...theme.colors,
+        primary25:'#C9E7CA',
+        primary:'#5CB85F',
+      }
+    }
+  }
+  const colorStyles = {
+    control : (styles) => ({...styles, backgroundColor:'white', width:'208px', height:'32px', borderRadius:'2px'}),
+    option: (styles) => {
+      return {...styles}
+    },
+    indicatorSeparator : (styles) => ({...styles, opacity:'0'}),
+    menu : (styles) => ({...styles, width:'208px'})
+  }
   return (
     <Container className="mb-4" style={{ marginTop: "-50px" }}>
       <div
@@ -132,9 +191,10 @@ const SearchContent = () => {
           <Form onBlur={offHighlight} onFocus={highlight} onSubmit={onSubmit}>
             <Row>
               <Col md>
-                <Form.Label style={styleP}>Nama Mobil</Form.Label>
+                <Form.Label style={styleP2}>Nama Mobil</Form.Label>
                 <Form.Control
                   onChange={handleName}
+                  
                   className="selectDrop"
                   value={name}
                   type="text"
@@ -143,53 +203,46 @@ const SearchContent = () => {
                 />
               </Col>
               <Col md>
-                <Form.Label style={styleP}>Kategori</Form.Label>
-                <Form.Select
-                  className="selectDrop"
-                  onChange={handleCategory}
-                  value={category}
-                  style={styleP}
-                >
-                  <option className="placeH form-select-sm">
-                    Masukan Kapasitas Mobil
-                  </option>
-                  <option className="placeH form-select-sm">2 - 4 orang</option>
-                  <option className="placeH form-select-sm">4 - 6 orang</option>
-                  <option className="placeH form-select-sm">6 - 8 orang</option>
-                </Form.Select>
+                <Form.Label style={styleP2}>Kategori</Form.Label>
+                <div style={{fontSize:'12px', fontWeight:'300', borderRadius:'2px'}} >
+                <Select 
+                styles={colorStyles}
+                theme={customTheme}
+                options={categoryList} 
+                onChange={handleCategory} 
+                placeholder="Masukan Kapasistas" 
+                isSearchable
+                autoFocus
+                />
+                </div>
+               
               </Col>
               <Col md>
-                <Form.Label style={styleP}>Harga</Form.Label>
-
-                <Form.Select
-                  onChange={handlePrice1}
-                  value={price}
-                  style={styleP}
-                  className="selectDrop"
-                >
-                  <option className="placeH form-select-sm">
-                    {" "}
-                    Masukan Harga Sewa Mobil
-                  </option>
-                  <option value="<400000" className="placeH form-select-sm">
-                    &lt; Rp.400000
-                  </option>
-                  <option
-                    value="400000-600000"
-                    className="placeH form-select-sm"
-                  >
-                    Rp.400.000 - Rp.600.000
-                  </option>
-                  <option value=">600000" className="placeH form-select-sm">
-                    &gt; Rp.600.000
-                  </option>
-                </Form.Select>
+                <Form.Label style={styleP2}>Harga</Form.Label>
+                <div style={{fontSize:'12px', fontWeight:'300', borderRadius:'2px'}} >
+                <Select 
+                styles={colorStyles}
+                theme={customTheme}
+                options={PriceList} 
+                onChange={handlePrice} 
+                placeholder="Masukan Harga Sewa" 
+                isSearchable
+                autoFocus
+                />
+                </div>
               </Col>
               <Col md>
-                <Form.Label style={styleP}>Status</Form.Label>
-                <Form.Select className="selectDrop" style={styleP}>
-                  <option className="placeH form-select-sm">Disewa</option>
-                </Form.Select>
+                <Form.Label style={styleP2}>Status</Form.Label>
+                <div style={{fontSize:'12px', fontWeight:'300', borderRadius:'2px'}} >
+                <Select 
+                styles={colorStyles}
+                theme={customTheme}
+                options={StatusList} 
+                placeholder="Disewa" 
+                isSearchable
+                autoFocus
+                />
+                </div>
               </Col>
               {result ? (
                 <Col md>
@@ -207,6 +260,7 @@ const SearchContent = () => {
                     type="submit"
                     variant="none"
                     className="btn-sewa1"
+                    style={{marginTop:'30px'}}
                     onClick={handleSubmit}
                   >
                     Cari Mobil

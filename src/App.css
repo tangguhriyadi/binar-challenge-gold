@@ -245,7 +245,7 @@
   
   }
   .selectDrop:focus {
-    border-color: #35B0A7;
+    border: 1px solid #5CB85F ;
   }
 
   #highlight {

@@ -7,14 +7,12 @@ const Testimonial = () => {
   const sliderRef = useRef(null);
   const settings = {
     className: "center",
-    /* dots:true, */
     centerMode: true,
     infinite: true,
     centerPadding: "320px",
     slidesToShow: 1,
     slideToScroll: 1,
     speed: 500,
-    /* adaptiveHeight: true, */
     responsive: [
       {
         breakpoint: 1024,

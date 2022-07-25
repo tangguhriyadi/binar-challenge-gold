@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import list_item from '../icon/list_item.svg'
-import Rec74 from '../icon/Rec74.svg'
+import list_item from "../icon/list_item.svg";
+import Rec74 from "../icon/Rec74.svg";
 
 export default class Footer extends Component {
   render() {
@@ -59,7 +59,7 @@ export default class Footer extends Component {
                 style={{ marginBottom: "14px" }}
                 src={list_item}
                 alt="list"
-                loading='lazy'
+                loading="lazy"
               ></img>
             </Col>
             <Col md={{ span: 3, offset: 1 }}>
@@ -68,7 +68,7 @@ export default class Footer extends Component {
                 style={{ marginBottom: "14px" }}
                 src={Rec74}
                 alt="logo"
-                loading='lazy'
+                loading="lazy"
               ></img>
             </Col>
           </Row>

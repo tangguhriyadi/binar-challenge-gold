@@ -17,15 +17,22 @@ export default class Faq extends Component {
       <Container className="mt-5 mb-5" id="faq">
         <Row>
           <Col md={5} className="faqContainer">
-            <h2 style={styleH} className="faqHead">Frequently Asked Question</h2>
+            <h2 style={styleH} className="faqHead">
+              Frequently Asked Question
+            </h2>
             <p style={styleP} className="faqContent">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit
             </p>
           </Col>
           <Col md={7}>
-            <Accordion className="mb-3" >
+            <Accordion className="mb-3">
               <Accordion.Item eventKey="0">
-                <Accordion.Header > <p className="mb-0" style={styleP}>Apa saja syarat yang dibutuhkan? </p></Accordion.Header>
+                <Accordion.Header>
+                  {" "}
+                  <p className="mb-0" style={styleP}>
+                    Apa saja syarat yang dibutuhkan?{" "}
+                  </p>
+                </Accordion.Header>
                 <Accordion.Body>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -38,9 +45,13 @@ export default class Faq extends Component {
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
-            <Accordion className="mb-3" >
+            <Accordion className="mb-3">
               <Accordion.Item eventKey="0">
-                <Accordion.Header><p className="mb-0" style={styleP}>Berapa hari minimal sewa mobil lepas kunci? </p></Accordion.Header>
+                <Accordion.Header>
+                  <p className="mb-0" style={styleP}>
+                    Berapa hari minimal sewa mobil lepas kunci?{" "}
+                  </p>
+                </Accordion.Header>
                 <Accordion.Body>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -53,9 +64,13 @@ export default class Faq extends Component {
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
-            <Accordion className="mb-3" >
+            <Accordion className="mb-3">
               <Accordion.Item eventKey="0">
-                <Accordion.Header><p className="mb-0" style={styleP}>Berapa hari sebelumnya sabaiknya booking sewa mobil? </p></Accordion.Header>
+                <Accordion.Header>
+                  <p className="mb-0" style={styleP}>
+                    Berapa hari sebelumnya sabaiknya booking sewa mobil?{" "}
+                  </p>
+                </Accordion.Header>
                 <Accordion.Body>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -68,9 +83,13 @@ export default class Faq extends Component {
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
-            <Accordion className="mb-3" >
+            <Accordion className="mb-3">
               <Accordion.Item eventKey="0">
-                <Accordion.Header><p className="mb-0" style={styleP}>Apakah Ada biaya antar-jemput? </p></Accordion.Header>
+                <Accordion.Header>
+                  <p className="mb-0" style={styleP}>
+                    Apakah Ada biaya antar-jemput?{" "}
+                  </p>
+                </Accordion.Header>
                 <Accordion.Body>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -83,9 +102,13 @@ export default class Faq extends Component {
                 </Accordion.Body>
               </Accordion.Item>
             </Accordion>
-            <Accordion className="mb-3" >
+            <Accordion className="mb-3">
               <Accordion.Item eventKey="0">
-                <Accordion.Header><p className="mb-0" style={styleP}>Bagaimana jika terjadi kecelakaan</p></Accordion.Header>
+                <Accordion.Header>
+                  <p className="mb-0" style={styleP}>
+                    Bagaimana jika terjadi kecelakaan
+                  </p>
+                </Accordion.Header>
                 <Accordion.Body>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.

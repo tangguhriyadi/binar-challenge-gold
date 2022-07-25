@@ -84,7 +84,6 @@ const SearchContent = () => {
               return (
                 e.name.toLowerCase().includes(name.toLowerCase()) &&
                 e.category.includes(category) &&
-                /* (e.price) >= (parseInt(price.slice(-6))) && */
                 e.price > 600000
               );
             });
@@ -94,7 +93,6 @@ const SearchContent = () => {
               return (
                 e.name.toLowerCase().includes(name.toLowerCase()) &&
                 e.category.includes(category) &&
-                /* (e.price) >= (parseInt(price.slice(-6))) && */
                 e.price < 400000
               );
             });
@@ -104,7 +102,6 @@ const SearchContent = () => {
               return (
                 e.name.toLowerCase().includes(name.toLowerCase()) &&
                 e.category.includes(category) &&
-                /* (e.price) >= (parseInt(price.slice(-6))) && */
                 e.price < 600000 &&
                 e.price >= 400000
               );

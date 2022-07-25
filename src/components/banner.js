@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import "../App.css";
 import { Row, Col, Button, Container } from "react-bootstrap";
-import {Link} from 'react-router-dom'
-import merc from '../icon/merc.svg'
-
+import { Link } from "react-router-dom";
+import merc from "../icon/merc.svg";
 
 export default class Banner extends Component {
   render() {
@@ -19,19 +18,16 @@ export default class Banner extends Component {
               kualitas terbaik dengan harga terjangkau. Selalu siap melayani
               kebutuhanmu untuk sewa mobil selama 24 jam.
             </p>
-            <Button
-            variant="none"
-            className="btn-sewa"
-            as={Link}
-            to='/search'
-            >Mulai Sewa Mobil</Button>
+            <Button variant="none" className="btn-sewa" as={Link} to="/search">
+              Mulai Sewa Mobil
+            </Button>
           </Col>
           <Col md={6}>
             <img
               className="carBanner"
               src={merc}
               alt="mobil"
-              loading='lazy'
+              loading="lazy"
             ></img>
           </Col>
         </Row>

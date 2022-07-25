@@ -5,7 +5,6 @@ import axios from "axios";
 import { BASE_URL } from "../utils/constant";
 import fi_users from "../icon/fi_users.svg";
 
-
 export const DetailContent = () => {
   const num = new Intl.NumberFormat("de-DE", {
     style: "decimal",
@@ -50,21 +49,49 @@ export const DetailContent = () => {
           <Form>
             <Row>
               <Col md={3}>
-                <Form.Label className="text-muted" style={styleP2}>Nama Mobil</Form.Label>
-                
-                <Form.Control className="cobs" style={{borderRadius:"2px", backgroundColor:'#D0D0D0'}} type="text" disabled />
+                <Form.Label className="text-muted" style={styleP2}>
+                  Nama Mobil
+                </Form.Label>
+
+                <Form.Control
+                  className="cobs"
+                  style={{ borderRadius: "2px", backgroundColor: "#D0D0D0" }}
+                  type="text"
+                  disabled
+                />
               </Col>
               <Col md={3}>
-                <Form.Label className="text-muted" style={styleP2}>Kategori</Form.Label>
-                <Form.Select className="select1" style={{borderRadius:"2px", backgroundColor:'#D0D0D0'}} type="text" disabled></Form.Select>
+                <Form.Label className="text-muted" style={styleP2}>
+                  Kategori
+                </Form.Label>
+                <Form.Select
+                  className="select1"
+                  style={{ borderRadius: "2px", backgroundColor: "#D0D0D0" }}
+                  type="text"
+                  disabled
+                ></Form.Select>
               </Col>
               <Col md={3}>
-                <Form.Label className="text-muted" style={styleP2}>Harga Sewa Per Hari</Form.Label>
-                <Form.Select className="select2" style={{borderRadius:"2px", backgroundColor:'#D0D0D0'}} type="text" disabled></Form.Select>
+                <Form.Label className="text-muted" style={styleP2}>
+                  Harga Sewa Per Hari
+                </Form.Label>
+                <Form.Select
+                  className="select2"
+                  style={{ borderRadius: "2px", backgroundColor: "#D0D0D0" }}
+                  type="text"
+                  disabled
+                ></Form.Select>
               </Col>
               <Col md={3}>
-                <Form.Label className="text-muted" style={styleP2}>Status</Form.Label>
-                <Form.Select className="select3" style={{borderRadius:"2px", backgroundColor:'#D0D0D0'}} type="text" disabled></Form.Select>
+                <Form.Label className="text-muted" style={styleP2}>
+                  Status
+                </Form.Label>
+                <Form.Select
+                  className="select3"
+                  style={{ borderRadius: "2px", backgroundColor: "#D0D0D0" }}
+                  type="text"
+                  disabled
+                ></Form.Select>
               </Col>
             </Row>
           </Form>
@@ -142,7 +169,7 @@ export const DetailContent = () => {
                     : "https://firebasestorage.googleapis.com/v0/b/rent-car-507f6.appspot.com/o/1655268790869-Innova.png?alt=media"
                 }
                 alt={state.name}
-                loading='lazy'
+                loading="lazy"
               />
               <Card.Body>
                 <Card.Title style={styleH}>{state.name}</Card.Title>
@@ -150,7 +177,7 @@ export const DetailContent = () => {
                   className="mb-2 text-muted"
                   style={{ fontSize: "10px", fontWeight: "700" }}
                 >
-                  <img src={fi_users} alt="users" loading='lazy'></img>{" "}
+                  <img src={fi_users} alt="users" loading="lazy"></img>{" "}
                   {state.category === "small" ? "4 - 6 orang" : state.category}
                 </Card.Subtitle>
                 <div
@@ -163,7 +190,6 @@ export const DetailContent = () => {
             </Card>
           </Col>
         </Row>
-       
       </Container>
     </>
   );

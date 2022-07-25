@@ -253,8 +253,10 @@
     transition: all 0.3s ease ;
   }
  
- 
- 
+ .css-1k9fvtq-menu > div > div:hover {
+  color:#5CB85F;
+  font-weight: 700;
+ }
 
   @media screen and (max-width: 768px){
     .logo {

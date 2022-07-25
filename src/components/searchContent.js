@@ -156,7 +156,7 @@ const SearchContent = () => {
       colors: {
         ...theme.colors,
         primary25: "#C9E7CA",
-        primary: "#5CB85F",
+        primary: "#5CB85F"
       },
     };
   };

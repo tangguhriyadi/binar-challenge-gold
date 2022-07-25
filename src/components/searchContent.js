@@ -212,7 +212,6 @@ const SearchContent = () => {
                     onChange={handleCategory}
                     placeholder="Masukan Kapasistas"
                     isSearchable
-                    autoFocus
                   />
                 </div>
               </Col>
@@ -232,7 +231,6 @@ const SearchContent = () => {
                     onChange={handlePrice}
                     placeholder="Masukan Harga Sewa"
                     isSearchable
-                    autoFocus
                   />
                 </div>
               </Col>
@@ -250,8 +248,6 @@ const SearchContent = () => {
                     theme={customTheme}
                     options={StatusList}
                     placeholder="Disewa"
-                    isSearchable
-                    autoFocus
                   />
                 </div>
               </Col>

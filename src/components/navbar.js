@@ -1,5 +1,5 @@
 import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
-import "../App.css";
+
 
 function NavbarComp() {
   return (

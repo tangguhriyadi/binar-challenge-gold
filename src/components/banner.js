@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../App.css";
 import { Row, Col, Button, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import merc from "../icon/merc.svg";
+
 
 export default class Banner extends Component {
   render() {
@@ -22,13 +22,15 @@ export default class Banner extends Component {
               Mulai Sewa Mobil
             </Button>
           </Col>
-          <Col md={6}>
+          <Col md={6} className="imgContainer">
             <img
               className="carBanner"
-              src={merc}
+              src="assets/images/car+bg.png"
               alt="mobil"
               loading="lazy"
             ></img>
+          
+            
           </Col>
         </Row>
       </Container>

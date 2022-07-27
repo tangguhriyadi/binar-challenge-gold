@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
 import { Card, Container, Col, Row } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
+
 
 const Testimonial = () => {
   const sliderRef = useRef(null);
